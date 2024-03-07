@@ -1,0 +1,24 @@
+<h2>From User Component</h2>
+
+<p>User: {{ username }} </p>
+<!-- {{ }} converts to string -->
+
+<!-- <p *ngIf="true">User1: {{ user1 }} </p> -->
+
+<!-- before v.17 -->
+<p *ngIf="show">Old form: User1: {{ user1 }}</p>
+
+<!-- from v.17 -->
+@if(show){
+    <p>New form: User1: {{ user1 }} </p>
+}
+@else {
+    <p>User data not available</p>
+}
+
+<!-- else if is available -->
+<!-- } @else if() {
+    
+} -->
+
+<p>All User: {{ allUser }} </p>

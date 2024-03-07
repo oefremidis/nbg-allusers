@@ -1,0 +1,31 @@
+<h2>From User List Component</h2>
+
+<p>All Users: {{ unames }}</p>
+
+
+<!-- ['Ann', 'Bob', 'Claire', 'David', 'Eve'] -->
+
+<!-- <ul>
+  <li *ngFor="let u of unames">{{ u }}</li>
+</ul> -->
+
+<!-- <ul  *ngFor="let u of unames">
+  <li>{{ u }}</li>
+</ul> -->
+
+<ul>
+@for (u of unames; track $index) {
+  <li>{{ u }}, {{ $index }}</li>
+} @empty {
+  <p>No data available - list is empty</p>
+}
+</ul>
+
+<!-- A dummy switch example -->
+@switch (favoriteColor) {
+  @case('red') { <p>Red</p> }
+  @case('green') { <p>Green</p> }
+  @case('blue') { <p>Blue</p> }
+  @default { <p> Unkown Color</p> }
+}
+
